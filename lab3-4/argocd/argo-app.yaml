@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   creationTimestamp: null
-  name: ahsoka20-argo-app
+  name: finn2-argo-app
   namespace: openshift-gitops
 spec:
   destination:
@@ -29,10 +29,10 @@ spec:
     jsonPointers:
     - /spec/host
     kind: Route
-  project: ahsoka20
+  project: finn2
   source:
     path: lab3-4/argocd
-    repoURL: https://github.com/jbcodeforce/eda-tech-academy.git
+    repoURL: https://github.com//eda-tech-academy.git
   syncPolicy:
     automated:
       prune: true

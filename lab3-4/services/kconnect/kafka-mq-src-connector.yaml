@@ -7,18 +7,18 @@ metadata:
     # in which to create this connector. That KafkaConnect instance
     # must have the eventstreams.ibm.com/use-connector-resources annotation
     # set to true.
-    eventstreams.ibm.com/cluster: ahsoka20-connect-cluster
+    eventstreams.ibm.com/cluster: finn2-connect-cluster
 spec:
   class: com.ibm.eventstreams.connect.mqsource.MQSourceConnector
   tasksMax: 1
   config:
-    mq.queue.manager: ahsoka20MQ
-    mq.connection.name.list: ahsoka20-mq-ibm-mq.ahsoka20.svc
+    mq.queue.manager: finn2MQ
+    mq.connection.name.list: finn2-mq-ibm-mq.finn2.svc
     mq.channel.name: DEV.APP.SVRCONN
     mq.queue: ITEMS
     mq.user.name: ""
     mq.password: ""
-    topic: ahsoka20-items
+    topic: finn2-items
     key.converter: org.apache.kafka.connect.storage.StringConverter
     value.converter: org.apache.kafka.connect.storage.StringConverter
     mq.record.builder: com.ibm.eventstreams.connect.mqsource.builders.DefaultRecordBuilder

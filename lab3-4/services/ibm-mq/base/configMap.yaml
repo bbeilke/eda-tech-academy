@@ -3,19 +3,19 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: mq-config
-  namespace: ahsoka20
+  namespace: finn2
 data:
   LICENSE: accept
   MQ_APP_PASSWORD: passw0rd
   MQ_ENABLE_METRICS: "true"
-  MQ_QMGR_NAME: ahsoka20MQ
+  MQ_QMGR_NAME: finn2MQ
 
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: mq-mqsc-config
-  namespace: ahsoka20
+  namespace: finn2
 data:
   example.mqsc: |
     DEFINE QLOCAL('ITEMS') REPLACE

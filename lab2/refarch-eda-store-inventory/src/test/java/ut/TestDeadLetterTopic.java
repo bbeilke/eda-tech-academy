@@ -39,7 +39,7 @@ public class TestDeadLetterTopic {
     private static String outTopicName = "my-output-topic";
     private  static TestOutputTopic<String, ItemTransaction> dlTopic;
     private static String deadLetterTopicName = "dl-topic";
-    // 0 add dead letter topic
+    // 0 add dead letter topic  
 
     /**
      * Using split and branches to separate good from wrong records

@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: ahsoka20
+  name: finn2
   namespace: openshift-gitops
   labels:
     gitops.tier.layer: infra
 spec:
   description: The ArgoCD project to manage the real time inventory Solution deployment
   sourceRepos: 
-  - https://github.com/jbcodeforce/eda-tech-academy.git
+  - https://github.com//eda-tech-academy.git
   # Only permit applications to deploy to the following namespace in the same cluster
   destinations:
-  - namespace: ahsoka20
+  - namespace: finn2
     server: https://kubernetes.default.svc
   - namespace: cp4i-eventstreams
     server: https://kubernetes.default.svc
@@ -27,6 +27,6 @@ spec:
   - name: read-only
     description: Read-only privileges to this project
     policies:
-    - p, proj:ahsoka20:read-only, applications, get, ahsoka20/*, allow
+    - p, proj:finn2:read-only, applications, get, finn2/*, allow
     groups:
     - argocd-admins

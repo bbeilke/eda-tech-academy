@@ -1,15 +1,15 @@
 apiVersion: mq.ibm.com/v1beta1
 kind: QueueManager
 metadata:
-  name: ahsoka20-mq
-  namespace: ahsoka20
+  name: finn2-mq
+  namespace: finn2
 spec:
   license:
     accept: true
     license: L-RJON-C7QG3S
     use: NonProduction
   queueManager:
-    name: ahsoka20MQ
+    name: finn2MQ
     mqsc:
       - configMap:
           name: mq-mqsc-config
